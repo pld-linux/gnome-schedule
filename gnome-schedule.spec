@@ -1,4 +1,5 @@
 Summary:	GNOME scheduler
+Summary(pl):	Narzêdzie do planowania dla GNOME
 Name:		gnome-schedule
 Version:	0.9.0
 Release:	1
@@ -19,8 +20,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Gnome-schedule is a GNOME GUI for configuring a users crontab. It was
-made for Vixie cron whom comes with Fedora Linux, but should work with
-other cron servers aswell if the format of the config file is similar.
+made for Vixie cron which comes with Fedora Linux, but should work
+with other cron daemons as well if the format of the config file is
+similar.
+
+%description -l pl
+Gnome-schedule to graficzny interfejs u¿ytkownika dla GNOME do
+konfigurowania crontaba u¿ytkownika. Zosta³o stworzone dla Vixie crona
+przychodz±cego z Fedora Linuksem, ale powinien dzia³aæ z tak¿e innymi
+demonami cron, o ile maj± podobny format pliku konfiguracyjnego.
 
 %prep
 %setup  -q
