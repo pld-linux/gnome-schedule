@@ -1,0 +1,14 @@
+diff -ur gnome-schedule-1.0.0-o/src/gnome-schedule gnome-schedule-1.0.0/src/gnome-schedule
+--- gnome-schedule-1.0.0-o/src/gnome-schedule	2005-12-31 12:07:58.000000000 -0700
++++ gnome-schedule-1.0.0/src/gnome-schedule	2006-01-03 20:39:57.000000000 -0700
+@@ -1,2 +1,2 @@
+ #! /bin/sh
+-PYTHONPATH=:/usr/lib/python2.4/site-packages/gtk-2.0/:$PYTHONPATH /usr/bin/python /usr/local/share/gnome-schedule/gnome-schedule.py $1
++PYTHONPATH=:/usr/lib/python2.4/site-packages/gtk-2.0/:$PYTHONPATH /usr/bin/python /usr/local/share/gnome-schedule/gnome-schedule.pyc $1
+diff -ur gnome-schedule-1.0.0-o/src/gnome-schedule.in gnome-schedule-1.0.0/src/gnome-schedule.in
+--- gnome-schedule-1.0.0-o/src/gnome-schedule.in	2005-08-24 14:39:04.000000000 -0600
++++ gnome-schedule-1.0.0/src/gnome-schedule.in	2006-01-03 20:40:30.000000000 -0700
+@@ -1,2 +1,2 @@
+ #! /bin/sh
+-PYTHONPATH=@PYTHONPATH@/gtk-2.0/:$PYTHONPATH @PYTHON_CONFIG@ @prefix@/share/gnome-schedule/gnome-schedule.py $1
++PYTHONPATH=@PYTHONPATH@/gtk-2.0/:$PYTHONPATH @PYTHON_CONFIG@ @prefix@/share/gnome-schedule/gnome-schedule.pyc $1
