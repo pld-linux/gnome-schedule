@@ -1,13 +1,13 @@
 Summary:	GNOME scheduler
 Summary(pl):	Narzêdzie do planowania dla GNOME
 Name:		gnome-schedule
-Version:	0.9.0
+Version:	1.0.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/gnome-schedule/%{name}-%{version}.tar.bz2
-# Source0-md5:	08c3f7680fe95fc4088289ed25552618
-Patch0:		%{name}-pyc.patch
+Source0:	http://dl.sourceforge.net/gnome-schedule/%{name}-%{version}.tar.gz
+# Source0-md5:	52b179c43135048ede51579a3e048019
+Patch0:	%{name}-pyc.patch
 BuildRequires:	gtk+2-devel >= 2:2.6.0
 BuildRequires:	libgnomeui-devel >= 2.6.0
 %pyrequires_eq  python-modules
@@ -54,10 +54,16 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_datadir}/%{name}/*.py
 
-%find_lang %{name}
+%find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+%scrollkeeper_update_post
+
+%postun
+%scrollkeeper_update_postun
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
@@ -66,5 +72,10 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*.py[oc]
 %{_datadir}/%{name}/*.glade
+%{_datadir}/%{name}/*.xml
 %{_desktopdir}/*.desktop
+%{_libdir}/bonobo/servers/*
+%dir %{_omf_dest_dir}/%{name}
+%{_omf_dest_dir}/%{name}/%{name}-C.omf
+%lang(es) %{_omf_dest_dir}/%{name}/%{name}-es.omf
 %{_pixmapsdir}/*.png
