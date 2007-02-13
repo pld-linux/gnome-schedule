@@ -1,5 +1,5 @@
 Summary:	GNOME scheduler
-Summary(pl.UTF-8):   Narzędzie do planowania dla GNOME
+Summary(pl.UTF-8):	Narzędzie do planowania dla GNOME
 Name:		gnome-schedule
 Version:	1.0.0
 Release:	1
