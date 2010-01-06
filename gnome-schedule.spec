@@ -7,15 +7,23 @@ License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/gnome-schedule/%{name}-%{version}.tar.gz
 # Source0-md5:	52b179c43135048ede51579a3e048019
-Patch0:	%{name}-pyc.patch
+Patch0:		%{name}-pyc.patch
+BuildRequires:	docbook-dtd42-xml
+BuildRequires:	gnome-doc-utils
 BuildRequires:	gtk+2-devel >= 2:2.6.0
 BuildRequires:	libgnomeui-devel >= 2.6.0
+BuildRequires:	libxslt-progs
+BuildRequires:	perl-XML-Parser
+BuildRequires:	pkgconfig
+BuildRequires:	python
+BuildRequires:	python-pygtk-devel
+BuildRequires:	rarian-compat
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq  python-modules
-BuildRequires:  python
-Requires:	yelp
-Requires:	crondaemon
 Requires:	at
+Requires:	crondaemon
 Requires:	python
+Requires:	yelp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
